@@ -33,7 +33,7 @@ function newQuote() {
       } else {
             authorText.textContent = quote.author;
       }
-      
+
 // Check Quote length to determine styling
       if (quote.text.length > 120) {
             quoteText.classList.add('long-quote');
@@ -55,6 +55,7 @@ async function getQuotes() {
         newQuote();
       } catch (error) {
        // Catch Error Here
+       console.log('whoops, no quote', error);
       }
 }
 
